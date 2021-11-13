@@ -45,6 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'pizza',
             img: 'images/pizza.png'
+        },
+        {
+            name: 'pizza',
+            img: 'images/pizza.png'
         }
     ]
 
