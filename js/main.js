@@ -1,1 +1,0 @@
-document.body.innerHTML = "<h1>What's good my dudes?</h1>";
