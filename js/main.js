@@ -1,1 +1,1 @@
-document.body.innerHTML = "What good my dudes?";
+document.body.innerHTML = "What's good my dudes?";
