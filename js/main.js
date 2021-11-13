@@ -1,1 +1,1 @@
-document.body.innerHTML = "<body>Working with JavaScript...</body>";
+document.body.innerHTML = "What good my dudes?";
