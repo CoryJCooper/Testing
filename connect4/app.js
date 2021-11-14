@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const result = document.querySelector('#result')
     const displayCurrentPlayer = document.querySelector('#current-player')
     let currentPlayer = 1
-  
+
     const winningArrays = [
       [0, 1, 2, 3],
       [41, 40, 39, 38],
