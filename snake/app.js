@@ -13,13 +13,14 @@ let speed = 0
 let intervalTime = 0
 let interval = 0
 
+
 //start and restart game
 function startGame(){
     currentSnake.forEach(index => squares[index].classList.remove('snake'))
     squares[appleIndex].classList.remove('apple')
     clearInterval(interval)
     Score = 0
-    //randomApple()
+    randomApple()
     direction = 1
     scoreDisplay.innerText = score
     intervalTime = 1000
@@ -28,6 +29,7 @@ function startGame(){
     currentSnake.forEach(index => squares[index].classList.add('snake'))
     interval = setInterval(moveOutcomes, intervalTime)
 }
+
 
 //Outcome Manager
 function moveOutcomes(){
@@ -51,7 +53,7 @@ function moveOutcomes(){
         squares[currentSnake[0]].classList.remove('apple')
         squares[tail].classList.add('snake')
         currentSnake.push(tail)
-        //randomApple()
+        randomApple()
         score++
         scoreDisplay.textContent = score
         clearInterval(interval)
@@ -59,6 +61,15 @@ function moveOutcomes(){
         interval = setInterval(moveOutcomes, intervalTime)
     }
     squares[currentSnake[0]].classList.add('snake')
+}
+
+
+//Apple Generation
+function randomApple(){
+    do{
+        appleIndex = Math.floor(math.random() * squares.length)
+    } while(squares[appleIndex].classList.contains('snake'))
+    squares[appleIndex].classList.add('apple')
 }
 
 
